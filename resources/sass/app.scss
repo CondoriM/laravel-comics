@@ -15,7 +15,7 @@ main{
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
+
     .comics{
         background-color: $dc-banner-bg;
 
@@ -41,4 +41,11 @@ main{
             }
         }
     }
+}
+
+//Footer
+#site_footer {
+    height: 400px;
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
 }

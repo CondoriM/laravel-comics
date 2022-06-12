@@ -10257,3 +10257,9 @@ main .comics .comic img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+#site_footer {
+  height: 400px;
+  background-image: url("../img/footer-bg.jpg");
+  background-size: cover;
+}
