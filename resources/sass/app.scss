@@ -5,3 +5,40 @@ $dc-footer-bg: #303030;
 $dc-text-dark: #464646;
 $dc-text-white: #FFFFF2;
 $dc-text-grey: #797777;
+
+//Main
+
+main{
+    .hero-image{
+        background-image: url('../img/jumbotron.jpg');
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .comics{
+        background-color: $dc-banner-bg;
+
+        h1{
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: $dc-primary;
+            color: $dc-text-white;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-top: -2rem;
+            margin-bottom: 2rem; 
+        }
+
+        .comic {
+            text-transform: uppercase;
+            color: white;
+
+            img {
+                height: 200px;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
+        }
+    }
+}

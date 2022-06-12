@@ -20,9 +20,10 @@ Route::get('/', function () {
     Route::get('/characters', function () {
     return 'characters page';
 })->name('characters');
-    
+
     Route::get('/comics', function () {
-    return view('comics');
+    $comics = config('db.comics');
+    return view('comics',compact('comics'));
 })->name('comics');
     
     Route::get('/movies', function () {
