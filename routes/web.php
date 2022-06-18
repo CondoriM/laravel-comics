@@ -21,10 +21,21 @@ Route::get('/', function () {
     return 'characters page';
 })->name('characters');
 
-    Route::get('/comics', function () {
+Route::get('/comics', function () {
     $comics = config('db.comics');
-    return view('comics',compact('comics'));
+    return view('comics.index',compact('comics'));
 })->name('comics');
+
+Route::get('/comics/{id}', function ($id) {
+    $comics = config('db.comics');
+    //dd($comics[$id]);
+    if(is_numeric($id) && $id >= 0 && $id < count($comics)){
+        $comic = $comics[$id];
+        return view('comics.show',compact('comic'));
+    }else{
+        abort(404);
+    }
+})->name('comic');
     
     Route::get('/movies', function () {
     return 'movies page';
