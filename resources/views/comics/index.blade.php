@@ -3,9 +3,6 @@
 @section('page-title','comics page')
 
 @section('content')
-<div class="hero-image">
-    
-</div>
 
 <div class="comics py-4">
     <div class="container">
