@@ -4,15 +4,28 @@
 
 @section('content')
 
+<div class="single-comic">
     <div class="hero-image">
-        <img class="img-fluid" src="{{$comic['thumb']}}" alt="">    
+        <div class="container">
+            <img class="img-fluid thumb" src="{{$comic['thumb']}}" alt=""> 
+        </div>   
     </div>
 
-    <div class="container">
+    <div class="container py-5">
         <div class="comic">
-            <p>{{$comic['title']}}</p>
-            <p>{{$comic['price']}}</p>
-            <p>{{$comic['description']}}</p>
+            <div class="row">
+                <div class="col-8">
+                    <h1 class="text-uppercase">{{$comic['title']}}</h1>
+                    <p>{{$comic['price']}}</p>
+                    <p>{{$comic['description']}}</p>
+                </div>
+
+                <div class="col-4 text-end">
+                    <h4 class="black-50 text-uppercase">Adevertisement</h4>
+                    <img class="img-fluid" src="{{asset('img/adv.jpg')}}" alt="">
+                </div>
+                
+            </div>
         </div>
     </div>
 
@@ -50,5 +63,6 @@
             </div>
         </div>
     </section>
+</div>
 
 @endsection

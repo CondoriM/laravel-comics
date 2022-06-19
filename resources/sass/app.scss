@@ -6,7 +6,26 @@ $dc-text-dark: #464646;
 $dc-text-white: #FFFFF2;
 $dc-text-grey: #797777;
 
+//Header
+
+#site_header{
+    a.active{
+        color: $dc-primary;
+        border-bottom: 4px solid $dc-primary;
+    }
+}
+
 //Main
+
+.single-comic{
+    .hero_image{
+        box-shadow:inset 0px -60px $dc-primary;
+        .thumb{
+            position: absolute;
+            bottom: 1rem;      
+        } 
+    }
+}
 
 main{
     .hero-image{

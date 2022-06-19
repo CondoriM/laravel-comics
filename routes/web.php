@@ -24,7 +24,7 @@ Route::get('/', function () {
 Route::get('/comics', function () {
     $comics = config('db.comics');
     return view('comics.index',compact('comics'));
-})->name('comics');
+})->name('comics.index');
 
 Route::get('/comics/{id}', function ($id) {
     $comics = config('db.comics');
@@ -35,7 +35,7 @@ Route::get('/comics/{id}', function ($id) {
     }else{
         abort(404);
     }
-})->name('comic');
+})->name('comics.show');
     
     Route::get('/movies', function () {
     return 'movies page';

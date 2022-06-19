@@ -1,4 +1,4 @@
-<header>
+<header id="site_header">
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
           <div class="container">
             <a class="navbar-brand" href="#">LOGO DC</a>
@@ -8,14 +8,14 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{route('homepage')}}">Home <span class="visually-hidden">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link {{Route::currentRouteName() === 'homepage' ? 'active' : ''}}" href="{{route('homepage')}}">Home <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('characters')}}">characters</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('comics')}}">comics</a>
+                        <a class="nav-link {{Route::currentRouteName() === 'comics.index' || Route::currentRouteName() === 'comics.show' ? 'active' : ''}}" href="{{route('comics.index')}}">comics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('movies')}}">movies</a>

@@ -10228,6 +10228,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#site_header a.active {
+  color: #0282F9;
+  border-bottom: 4px solid #0282F9;
+}
+
+.single-comic .hero_image {
+  box-shadow: inset 0px -60px #0282F9;
+}
+.single-comic .hero_image .thumb {
+  position: absolute;
+  bottom: 1rem;
+}
+
 main .hero-image {
   background-image: url("../img/jumbotron.jpg");
   height: 500px;
